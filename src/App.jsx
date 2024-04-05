@@ -1,11 +1,4 @@
-function Header() {
-  return (
-    <header>
-      <h3>Result University</h3>
-      <span>Тут будет время</span>
-    </header>
-  );
-}
+import Header from "./components/Header"
 export default function App() {
   return (
     <div>
