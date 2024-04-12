@@ -22,7 +22,17 @@ export default function App() {
         <section>
           <h3>Чим ми відрізняємося</h3>
 
-          <Button />
+          {/* <Button text="button 1" />
+          <Button text="button 2" /> */}
+          <Button>
+            <span>
+              <h3>111</h3>
+              <h4>222</h4>
+            </span>
+          </Button>
+          <Button>Подход</Button>
+          <Button>Доступность</Button>
+          <Button>Концентрация</Button>
         </section>
       </main>
     </div>
