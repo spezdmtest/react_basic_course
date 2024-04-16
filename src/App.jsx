@@ -11,22 +11,15 @@ export default function App() {
           <h3>Наш підхід до навчання</h3>
           <ul>
             {ways.map((way) => (
-              <WayToTeach key={way.title} {...way} />
+              <WayToTeach
+                key={way.title}
+                {...way}
+              />
             ))}
-            {/* <WayToTeach
-              title={ways[0].title}
-              description={ways[0].description}
-            />
-            <WayToTeach {...ways[1]} />
-            <WayToTeach {...ways[2]} />
-            <WayToTeach {...ways[3]} /> */}
           </ul>
         </section>
         <section>
           <h3>Чим ми відрізняємося</h3>
-
-          {/* <Button text="button 1" />
-          <Button text="button 2" /> */}
           <Button>
             <span>
               <h3>111</h3>
