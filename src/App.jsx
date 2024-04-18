@@ -15,6 +15,15 @@ export default function App() {
     console.log(content);
     // content = type;
   }
+
+  let tabContent = null;
+  if (contentType) {
+    tabContent = <p>{differences[contentType]}</p>
+  } else {
+    tabContent = <p>Нажми на кнопку</p>
+  }
+
+
   return (
     <div>
       <Header />
@@ -48,9 +57,12 @@ export default function App() {
           {contentType ? <p>differences[contentType]</p> : null} */}
           
           {/* v3 */}
-          {!contentType && <p>Нажми на кнопку</p>}
+          {/* {!contentType && <p>Нажми на кнопку</p>}
           {contentType && <p>{differences[contentType]}</p>}
-        
+           */}
+
+          {/* v4 tabContent */}
+          {tabContent}
         </section>
       </main>
     </div>
