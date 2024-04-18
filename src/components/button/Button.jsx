@@ -4,7 +4,7 @@ import "./Button.css";
 //   return <button className="button">{text}</button>;
 // }
 export default function Button({ children, onClick }) {
-  console.log("Botton Component Render");
+  // console.log("Botton Component Render");
   return (
     <button
       className="button"
