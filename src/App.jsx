@@ -5,13 +5,14 @@ import Button from "./components/Button/Button";
 import { useState } from "react";
 
 export default function App() {
-  const [content, setContent] = useState("Нажмите на кнопку") 
+  const [content, setContent] = useState("Нажмите на кнопку");
   // let content = "Нажми на кнопку";
-  // console.log("App Component Render");
+  console.log("App Render");
 
   function handleClick(type) {
     // console.log("button clickted", type);
-    setContent(type); 
+    setContent(type);
+    console.log(content);
     // content = type;
   }
   return (
