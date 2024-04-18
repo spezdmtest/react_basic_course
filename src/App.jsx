@@ -35,7 +35,22 @@ export default function App() {
           <Button onClick={() => handleClick("way")}>Подход</Button>
           <Button onClick={() => handleClick("easy")}>Доступность</Button>
           <Button onClick={() => handleClick("program")}>Концентрация</Button>
-          <p>{differences[contentType]}</p>
+          
+          {/* v1 */}
+          {/* {contentType ? (
+            <p>{differences[contentType]}</p>
+          ) : (
+            <div>Нажми на кнопку</div>
+          )} */}
+          
+          {/* v2 */}
+          {/* {!contentType ? <p>Нажми на кнопку</p> : null}
+          {contentType ? <p>differences[contentType]</p> : null} */}
+          
+          {/* v3 */}
+          {!contentType && <p>Нажми на кнопку</p>}
+          {contentType && <p>{differences[contentType]}</p>}
+        
         </section>
       </main>
     </div>
