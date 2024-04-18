@@ -5,13 +5,13 @@ import Button from "./components/Button/Button";
 import { useState } from "react";
 
 export default function App() {
-  const [content, setContent] = useState("Нажмите на кнопку");
+  const [contentType, setContentType] = useState(null);
   // let content = "Нажми на кнопку";
   console.log("App Render");
 
   function handleClick(type) {
     // console.log("button clickted", type);
-    setContent(type);
+    setContentType(type);
     console.log(content);
     // content = type;
   }
@@ -35,7 +35,7 @@ export default function App() {
           <Button onClick={() => handleClick("way")}>Подход</Button>
           <Button onClick={() => handleClick("easy")}>Доступность</Button>
           <Button onClick={() => handleClick("program")}>Концентрация</Button>
-          <p>{differences[content]}</p>
+          <p>{differences[contentType]}</p>
         </section>
       </main>
     </div>
