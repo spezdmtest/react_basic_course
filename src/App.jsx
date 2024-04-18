@@ -16,12 +16,12 @@ export default function App() {
     // content = type;
   }
 
-  let tabContent = null;
-  if (contentType) {
-    tabContent = <p>{differences[contentType]}</p>
-  } else {
-    tabContent = <p>Нажми на кнопку</p>
-  }
+  // let tabContent = null;
+  // if (contentType) {
+  //   tabContent = <p>{differences[contentType]}</p>
+  // } else {
+  //   tabContent = <p>Нажми на кнопку</p>
+  // }
 
 
   return (
@@ -41,9 +41,9 @@ export default function App() {
         </section>
         <section>
           <h3>Чим ми відрізняємося</h3>
-          <Button onClick={() => handleClick("way")}>Подход</Button>
-          <Button onClick={() => handleClick("easy")}>Доступность</Button>
-          <Button onClick={() => handleClick("program")}>Концентрация</Button>
+          <Button isActive= {contentType === "way"} onClick={() => handleClick("way")}>Подход</Button>
+          <Button isActive= {contentType === "easy"} onClick={() => handleClick("easy")}>Доступность</Button>
+          <Button isActive= {contentType === "program"} onClick={() => handleClick("program")}>Концентрация</Button>
           
           {/* v1 */}
           {/* {contentType ? (
@@ -56,13 +56,13 @@ export default function App() {
           {/* {!contentType ? <p>Нажми на кнопку</p> : null}
           {contentType ? <p>differences[contentType]</p> : null} */}
           
-          {/* v3 */}
-          {/* {!contentType && <p>Нажми на кнопку</p>}
+         
+          {!contentType && <p>Нажми на кнопку</p>}
           {contentType && <p>{differences[contentType]}</p>}
-           */}
+          
 
           {/* v4 tabContent */}
-          {tabContent}
+          {/* {tabContent} */}
         </section>
       </main>
     </div>
